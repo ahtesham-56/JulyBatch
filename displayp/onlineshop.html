@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: cursive;
+            background-color: #f8f8f8;
+            margin: 0;
+        }
+
+        .parent{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 10px;
+        }
+
+        .product{
+            border: 2px solid black;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 4px 12px black;
+            border-radius: 10px;
+        }
+
+        .product img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        h2{
+            color: red;
+        }
+
+        button{
+            padding: 10px;
+            border: none;
+            background-color: goldenrod;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+        }
+        button:hover{
+            background-color: lightgreen;
+            transform: scale(1.02);
+            cursor: pointer;
+        }
+
+        .product:hover{
+            transform: scale(1.02);
+        }
+
+        p{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+
+        <div class="product">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDr4uN2hRUGNos_T5igjf1sDi4iS57Toffp0o9GFQCOg&s=10" alt="">
+            <h2>HeadPhone</h2>
+            <p> <del>$100</del> <mark>$80</mark> </p>
+            <button>Add To Cart</button>
+        </div>
+
+        <div class="product">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk4-fsVzf41bVst2NASc5BWxAvEsc5uv504Jewo2CB6w&s=10" alt="">
+            <h2> Water Bottel </h2>
+            <p><del>$10</del> <mark>$8</mark> </p>
+            <button>Add To Cart</button>
+        </div>
+
+        <div class="product">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5dalDnV885s-smzly_G33ro9h7P8OK8UDxyx-hPywiw&s=10" alt="">
+            <h2> College Bag</h2>
+            <p><del>$50</del> <mark>$30</mark></p>
+            <button>Add To Cart</button>
+        </div>
+
+        <div class="product">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9do8mmaJ40rKHGzyM7oBGIfDLg8GqwYkJ4g4DyT-D_w&s=10" alt="">
+            <h2> I Pad </h2>
+            <p><del>$1500</del> <mark>$1200</mark></p>
+            <button>Add To Cart</button>
+        </div>
+
+        <div class="product">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzNZRZW02sltYlDw1HZM2dQryrpcX9YwpPezojIMMwmQ&s=10" alt="">
+            <h2> MackBook</h2>
+            <p><del>$1500</del> <mark>$1400</mark></p>
+            <button>Add To Cart</button>
+        </div>
+
+        <div class="product">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlhJWvEpPo-NbklE5IHrvK7vLE7XGDBQOpung_peMBbA&s=10" alt="">
+            <h2>Shoes</h2>
+            <p><del>$15</del> <mark>$10</mark></p>
+            <button>Add To Cart</button>
+        </div>
+
+        <div class="product">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWMgQPgVFS17Te6rsrBGjQyhJ9NucLySdBwLHwWQAAKQ&s=10" alt="">
+            <h2>Toy</h2>
+            <p><del>$10</del> <mark>$5</mark></p>
+            <button>Add To Cart</button>
+        </div>
+        
+    </div>
+</body>
+</html>
