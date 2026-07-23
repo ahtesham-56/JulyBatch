@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="xyz">Hello guys</p>
+
+    <p id="abc">Web development</p>
+
+    <p>The plan simple tag</p>
+
+    <div class="myclass">AI developer -0</div>
+    <div class="myclass">ML developer -1</div>
+
+    <div class="box">Module 1</div>
+    <div class="box">Module 2</div>
+
+    <ul id="data">
+
+    </ul>
+    
+
+    <script>
+        var el = document.getElementById("xyz")
+        console.log(el);
+
+        var el1 = document.getElementById("abc")
+        console.log(el1)
+        console.log(el1.textContent)
+
+        var el2 = document.getElementsByClassName("myclass")
+        console.log(el2);
+
+        console.log(el2[1]);
+        
+        console.log(el2 [1].textContent);
+
+        var el3 = document.getElementsByTagName("P")
+
+        console.log(el3);
+
+        console.log(el3 [2]);
+
+        console.log(el3 [2].textContent);
+
+
+        // var el4 = document.querySelector(".box")
+        // console.log(el4);
+
+
+        var el4 = document.querySelectorAll(".box")
+        console.log(el4 [0].textContent);
+
+
+        var ul = document.getElementById("data")
+
+        var list = document.createElement("li")
+
+        list.textContent = "water";
+        console.log(list)
+
+        ul.appendChild(list)
+
+
+
+    </script>
+</body>
+</html>
