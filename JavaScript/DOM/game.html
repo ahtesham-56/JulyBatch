@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 50px;
+        background: linear-gradient(to right, blue, lightblue);
+        text-align: center;
+    }
+
+    h1{
+        color: white;
+    }
+    .choice{
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    button{
+        padding: 12px;
+        margin: 10px;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .rock{
+        background-color: #ffcc00;
+    }
+    .paper{
+        background-color: #66ccff;
+    }
+    .secissor{
+        background-color: #ff6666;
+    }
+
+    #result{
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+
+    }
+
+    .score{
+        margin-top: 20px;
+        font-size: 18px;
+        color: black;
+        background: white;
+        padding: 15px;
+        display: block;
+        box-shadow: 0 0 15px red;
+        border-radius: 10px;
+
+    }
+
+    .reset{
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    
+    <h1>Rock Paper Secissor</h1>
+    <hr>
+
+    
+
+        <div class = "choice" >
+            <button class = "rock" onclick="game('rock')">     Rock</button>
+            <button class = "paper" onclick="game('paper')">    Paper</button>
+            <button class = "scecissor" onclick="game('scissor')">Secissor</button>
+            
+            </div>
+
+            <p id="result"> chose an option in the game</p>
+
+            <div class="score">
+                <p> <strong>ScoreBoard</strong></p>
+                <p>Win =    <span id="win">0</span></p>
+                <p>Losses = <span id="losses">0</span></p>
+                <p>Draw =   <span id="draw">0</span></p>
+            </div>
+
+            <button class="reset">Reset</button>
+
+            <script>
+
+                let win = 0;
+                let losses = 0;
+                let draw = 0;
+
+                function game(choice){
+
+                    const choices = ["rock", "paper", "scissor"];
+
+                    const computerChoice = choices [Math.floor (Math.random() *3)];
+
+                    let resultMessage = ''
+                    if(choice === computerChoice){
+                        resultMessage = 'You pick the same option, it is draw'+ choice;
+                        draw++
+                    }else if(
+                        (choice === 'rock' && computerChoice === 'secissor') ||
+
+                        (choice === 'paper' && computerChoice === 'rock') ||
+
+                        (choice === 'secissor' && computerChoice === 'paper')
+                    ){
+
+                        resultMessage = ' You Won '  +  choice  + ' Beats '  +  computerChoice  
+                        win++            
+                    }else{
+                        resultMessage = ' You lose '  +  choice  +  ' Beats '  +  computerChoice
+                        losses++
+                    }
+
+                    document.getElementById('result').innerHTML = resultMessage;
+
+                    document.getElementById('win').innerHTML = win;
+
+                    document.getElementById('losses').innerHTML = losses;
+
+                    document.getElementById('draw').innerHTML = draw;
+                }
+            </script>
+    
+</body>
+</html>
