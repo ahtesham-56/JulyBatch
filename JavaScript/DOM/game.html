@@ -70,6 +70,8 @@
         color: black;
         border: none;
         border-radius: 5px;
+        background-color: aqua;
+        font-weight: bold;
     }
 </style>
 <body>
@@ -95,7 +97,7 @@
                 <p>Draw =   <span id="draw">0</span></p>
             </div>
 
-            <button class="reset">Reset</button>
+            <button class="reset" onclick="resetGame()">Reset</button>
 
             <script>
 
@@ -135,7 +137,22 @@
                     document.getElementById('losses').innerHTML = losses;
 
                     document.getElementById('draw').innerHTML = draw;
+
+
                 }
+
+                function resetGame(){
+                                    win = 0;
+                    losses = 0;
+                    draw = 0;
+
+                    document.getElementById('win').innerHTML = win;
+                    document.getElementById('losses').innerHTML = losses;
+                    document.getElementById('draw').innerHTML = draw;
+                    document.getElementById('result').innerHTML = 'chose an option in the game';
+                }
+
+                
             </script>
     
 </body>
