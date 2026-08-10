@@ -1,14 +1,17 @@
-function App() {
-  return (
-    <div style={{ textAlign: "center", marginTop: "100px" }}>
-      <h1>Welcome to React JS</h1>
-      <p>My first React application using Vite.</p>
+import React from "react";
+import ButtonExample from "./BUttonsBs";
 
-      <button onClick={() => alert("Hello! Welcome to React.")}>
-        Click Me
-      </button>
+
+function App(){
+
+  return (
+
+    <div>
+      <h1>React Button</h1>
+      <ButtonExample/>
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
