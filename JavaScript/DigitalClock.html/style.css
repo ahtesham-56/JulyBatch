@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    font-family: Arial, sans-serif;
+    background : linear-gradient(135deg, #0f2027, #203a43);
+}
+
+.clock-container {
+    text-align: center;
+    background: black;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px lightgray;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+#clock {
+    font-size: 60px;
+    font-weight: bold;
+    color: #00ff88;
+    letter-spacing: 3px;
+}
+
+#date {
+    margin-top: 15px;
+    color: #ddd;
+    font-size: 20px;
+}
